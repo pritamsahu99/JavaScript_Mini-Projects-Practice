@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dae7fb;
+}
+h1{
+    font-size: 4rem;
+    color: rgb(255, 156, 156);  
+}
+input{
+    box-shadow:  35px 35px 70px #4fdfd0,-35px -35px 70px #4fdfc754;
+    width: 500px;
+    height: 80px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    text-align: start;
+    font-size: 1em;
+    transition: all .3s ease-in-out;
+    padding: 5px 15px;
+    background-color: #cdfffa78;
+    border: 1px rgb(0, 89, 255) dotted;
+}
+#taskInput:focus{
+    outline: 1.5px solid rgb(0, 174, 255);
+    transition: all .3s ease-in;    
+}
+&::placeholder {
+    color: rgba(97, 0, 0, 0.546);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 30px;
+}
+#addTask{
+    cursor: pointer;
+    background-color: rgba(141, 77, 77, 0.694);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all .3s ease-in-out;    
+}
+#deleteTask{
+    cursor: pointer;
+    background-color: rgba(141, 77, 77, 0.694);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all .3s ease-in-out;
+}
+.buttons #addTask:hover,
+.buttons #deleteTask:hover {
+    background-color: rgb(244, 155, 155);
+}
+.buttons #addTask:active,
+.buttons #deleteTask:active {
+    scale: .95;
+    background-color: rgba(159, 36, 36, 0.795);
+}
+
+li {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    min-height: 5vh;
+    margin: 8px;
+    list-style-type: none; 
+}
+input[type="checkbox"] {
+    width: 18px; 
+    height: 18px; 
+    margin-right: 10px; 
+    transition: all .3s ease-in-out;
+}
+#taskList{
+    display: none;  
+    border-radius: 8px;
+    width: 400px;
+    height: 30vh;
+    overflow-y: scroll;
+    background: #f9b9b981;
+    box-shadow:  35px 35px 70px #4fdfd0,-25px -25px 60px #4fdfc754;
+}
+#taskList::-webkit-scrollbar-thumb{
+    background:#0dc15271 ;
+    border-radius:10px; 
+}
+#taskList::-webkit-scrollbar {
+    width: 5px; 
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 2rem;
+    }     
+    input{
+        width: 250px;
+        height: 60px;
+        margin-top: 20px;
+    }
+    .buttons{
+        display: flex;
+        gap: 1.5rem;
+        margin: 20px;
+    }
+    li {
+        display: flex;
+        place-items: center;
+        font-size: 1em;
+        min-height: 5vh;
+        list-style-type: none; 
+    }
+    #taskList{
+        display: none;    
+        width: 250px;
+        height: 25vh;
+    }
+    input[type="checkbox"] {
+        position: relative;
+        top: 0;
+        left: 10px;
+        transform: translate(-50%, -50%);
+    }
+
+}
