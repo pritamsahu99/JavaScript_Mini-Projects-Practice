@@ -1,95 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Dev: Master Course @dot Batch</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="blur-container">
-      <img id="loader-image" src="./codehlp-logo.svg">
+      <img id="loader-image" src="./codehlp-logo.svg" />
     </div>
     <div id="container">
-        <div class="para">
-           <div class="para1">
-            <p>Welcome To </p>
-            <p style="color: #6674cc;">CodeHelp🤗</p>
-           </div>
-            <h6>Choose Courses Below👍</h6>
+      <div class="para">
+        <div class="para1">
+          <p>Welcome To</p>
+          <p style="color: #6674cc">CodeHelp🤗</p>
         </div>
-        <div class="bocContainer">
-          <div class="boxCont">
-            <div>
-                <img src="./dot_batch.jpg" alt="web dev batch">
-                <div class="text">Web Development Master Course @dot Batch</div>
-                <div class="embed"></div>
-                <div id="texts">
-                    <p style="color: #6674cc;">&#8377;4500 </p>
-                    <p id="strike" style="color: #777c85;">&#8377;6999</p>
-                    <p id="text-base">42% Off</p>
-                </div>
+        <h6>Choose Courses Below👍</h6>
+      </div>
+      <div class="bocContainer">
+        <div class="boxCont">
+          <div>
+            <img src="./dot_batch.jpg" alt="web dev batch" />
+            <div class="text">Web Development Master Course @dot Batch</div>
+            <div class="embed"></div>
+            <div id="texts">
+              <p style="color: #6674cc">&#8377;4500</p>
+              <p id="strike" style="color: #777c85">&#8377;6999</p>
+              <p id="text-base">42% Off</p>
             </div>
+          </div>
         </div>
         <div class="boxCont">
-                <div class="content">
-                    <div>
-                        <img src="./dsa_supreme_batch.jpg" alt="web dev batch">
-                        <div class="text">Data Structures & Algorithms BootCamp @Supreme Batch</div>
-                        <div class="embed"></div>
-                        <div id="texts">
-                            <p style="color: #6674cc;">&#8377;3500 </p>
-                            <p id="strike" style="color: #777c85;">&#8377;6999</p>
-                            <p id="text-base">50% Off</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="content">
+            <div>
+              <img src="./dsa_supreme_batch.jpg" alt="web dev batch" />
+              <div class="text">
+                Data Structures & Algorithms BootCamp @Supreme Batch
+              </div>
+              <div class="embed"></div>
+              <div id="texts">
+                <p style="color: #6674cc">&#8377;3500</p>
+                <p id="strike" style="color: #777c85">&#8377;6999</p>
+                <p id="text-base">50% Off</p>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-        
+      </div>
     </div>
-<script>
-const loader = document.getElementById("blur-container");
-const wrapper = document.getElementById("container");
-
-function animateEffects() {
-  let scaleValue = 0; // Initial scale value
-
-  const animationInterval = setInterval(() => {
-    scaleValue += 0.02; // Adjust the increment for a smoother transition
-    loader.style.transform = `scale(${scaleValue})`;
-
-    if (scaleValue >= 1) {
-      clearInterval(animationInterval);
-      setTimeout(zoomInImage, 1500); // Call the zoomInImage function after a delay
-    }
-  }, 25); // Adjust the interval for smoother animation
-}
-
-function zoomInImage() {
-  let blurAmount = 0; 
-  let scaleValue = 1; 
-
-  const zoomInterval = setInterval(() => {
-    blurAmount += 1;
-    scaleValue += 0.1;
-    loader.style.filter = `blur(${blurAmount}px)`;
-    loader.style.transform = `scale(${scaleValue})`;
-  
-    if (blurAmount >= 20) {
-      clearInterval(zoomInterval);
-      loader.style.display = "none";
-      loader.style.opacity = 0;
-      wrapper.style.display = "block";
-    }
-  }, 60); // Adjust the interval for smoother animation
-}
-
-window.onload = animateEffects;
-
-</script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
